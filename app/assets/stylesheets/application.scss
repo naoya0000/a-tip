@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
 
-@charset "UTF-8";
+ @charset "UTF-8";
+ 
+ @import "slick-theme";
+ @import "slick"; 
 
 
 
@@ -28,6 +32,7 @@ footer #footer_navi ul {
 footer {
     background-color: #956840;
     text-align: center;
+    width: 100%;
 }
 
 footer #footer_navi {
