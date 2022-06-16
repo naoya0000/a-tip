@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  get 'contacts/new', to: 'contacts#new'
+  get 'contacts/thanks', to: 'contacts#thanks'
+  resources :contacts, only: [:create]
+  
   get 'signup', to: 'users#new'
   resources :users, only: [:create]
   

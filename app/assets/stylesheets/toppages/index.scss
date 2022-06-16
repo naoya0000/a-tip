@@ -5,17 +5,22 @@
 }
 
 .slider a {
-  padding: 0 0 0 50px;
+  padding: 0 0 0 90px;
 }
 
 .wrapper {
-  
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0 50px;
 }
 
 .main {
-  
+  width: 50%;
+  text-align: center;
 }
 
 .sidebar {
- 
+  width: 50%;
+  background-color: silver;
 }

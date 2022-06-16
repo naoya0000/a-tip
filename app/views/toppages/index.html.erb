@@ -1,51 +1,50 @@
-<div class="slider">
-  <a><img src="../../assets/SPY×FAMILY.jpg" alt="画像" height="300px"></a>
-  <a><img src="../../assets/呪術廻戦.jpg" alt="画像" height="300px"></a>
-  <a><img src="../../assets/鬼滅の刃.jpg" alt="画像" height="300px"></a>
-  <a><img src="../../assets/パリピ孔明.jpg" alt="画像" height="300px"></a>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script type="text/javascript">
-  $(function(){
-    $('.slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
+  <div class="slider">
+    <a><img src="../../assets/SPY×FAMILY.jpg" alt="画像" height="300px"></a>
+    <a><img src="../../assets/呪術廻戦.jpg" alt="画像" height="300px"></a>
+    <a><img src="../../assets/鬼滅の刃.jpg" alt="画像" height="300px"></a>
+    <a><img src="../../assets/パリピ孔明.jpg" alt="画像" height="300px"></a>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        pauseOnHover: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
     });
-  });
-</script>
-
-<div id="wrapper">
-  <div id="main">
-    <h4>放送中</h4>
-    <div class="slider-v">
-      <a><img src="../../assets/SPY×FAMILY.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/呪術廻戦.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/鬼滅の刃.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/パリピ孔明.jpg" alt="画像" height="300px"></a>
+  </script>
+<div class="container">  
+  <div class="wrapper">
+    
+    <div class="main">
+      <h4>放送中</h4>
+      <div class="slider-v">
+        <a><img src="../../assets/SPY×FAMILY.jpg" alt="画像" height="300px"></a>
+        <a><img src="../../assets/呪術廻戦.jpg" alt="画像" height="300px"></a>
+        <a><img src="../../assets/鬼滅の刃.jpg" alt="画像" height="300px"></a>
+        <a><img src="../../assets/パリピ孔明.jpg" alt="画像" height="300px"></a>
+      </div>
     </div>
     
-    <script type="text/javascript">
-      $(function(){
-        $('.slider-v').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          vertical: true,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        });
-      });
-    </script>
+    <div class="sidebar">
+      <h4>作品検索</h4>
+    </div>
+    
   </div>
-  
-  <div id="sidebar">
-    <h4>検索機能</h4>
-  </div>
-  
 </div>
-
+<footer>
+  <div id="footer_navi">
+    <ul>
+      <li><%= link_to 'お問い合わせ', "contacts/new" %></li>
+      <li>退会</li>
+    </ul>
+  </div>
+</footer>
