@@ -5,22 +5,50 @@
 }
 
 .slider a {
-  padding: 0 0 0 90px;
+  padding: 0 0 0 50px;
 }
 
 .wrapper {
   width: 100%;
+  height: 700px;
   display: flex;
   justify-content: space-between;
-  margin: 100px 0 50px;
+  margin: 70px 0 50px;
 }
 
 .main {
-  width: 50%;
-  text-align: center;
+  width: 42%;
 }
 
+.mainhead {
+  height: 5%;
+}
+
+.maincontent {
+  height: 95%;
+  padding: 12px 0 0 12px;
+}
+
+.scroll {
+  height: 650px;
+  overflow: scroll;
+}
+
+.scroll-content {
+  margin-top: 10px;
+}
+
+
 .sidebar {
-  width: 50%;
+  width: 55%;
+}
+
+.sidehead {
+  height: 5%;
+}
+
+.sidecontent {
   background-color: silver;
+  height: 95%;
+  padding: 10px 3px;
 }
