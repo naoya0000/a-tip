@@ -5,12 +5,13 @@
 }
 
 .slider a {
+  display: block;
   padding: 0 0 0 50px;
 }
 
 .wrapper {
   width: 100%;
-  height: 700px;
+  height: 670px;
   display: flex;
   justify-content: space-between;
   margin: 70px 0 50px;
@@ -30,14 +31,13 @@
 }
 
 .scroll {
-  height: 650px;
-  overflow: scroll;
+  height: 630px;
 }
 
-.scroll-content {
-  margin-top: 10px;
+.scroll-content a {
+  display: block;
+  margin-bottom: 10px;
 }
-
 
 .sidebar {
   width: 55%;
@@ -45,10 +45,15 @@
 
 .sidehead {
   height: 5%;
+  margin-bottom: 18px;
 }
 
 .sidecontent {
   background-color: silver;
-  height: 95%;
-  padding: 10px 3px;
+  height: 92.8%;
+  padding: 20px 20px;
+}
+
+.sidecontent2 {
+  padding-top: 50px;
 }
