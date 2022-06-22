@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 .slider {
   background-color: black;
 }
@@ -43,17 +44,29 @@
   width: 55%;
 }
 
-.sidehead {
+.sidehead1 {
   height: 5%;
   margin-bottom: 18px;
 }
 
 .sidecontent {
   background-color: silver;
-  height: 92.8%;
+  height: 40%;
   padding: 20px 20px;
 }
 
-.sidecontent2 {
+.sidecontent1b {
   padding-top: 50px;
+}
+
+.sidehead2 {
+  height: 5%;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.sidecontent2 {
+  background-color: silver;
+  height: 42.4%;
+  padding: 20px 20px;
 }

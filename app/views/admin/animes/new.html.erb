@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    
+    <div class="text-center my-4">
+      <h1>作品登録</h1>
+    </div>
+    
+    <div class="col-sm-6 offset-sm-3">
+  
+      <%= form_with(model: [ :admin, @anime ]) do |f| %>
+      
+        <div class="mb-3">
+          <%= f.label :img1, 'メイン画像' %>
+          <%= f.file_field :img1, class: 'form-control' %>
+          <p><%= f.check_box :remove_img1 %>画像を削除する</p>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :img2, 'サブ画像' %>
+          <%= f.file_field :img2, class: 'form-control' %>
+          <p><%= f.check_box :remove_img2 %>画像を削除する</p>
+        </div>
+  
+        <div class="mb-3">
+          <%= f.label :title1, 'タイトル' %>
+          <%= f.text_field :title1, class: 'form-control' %>
+        </div>
+  
+        <div class="mb-3">
+          <%= f.label :title2, 'タイトル（読みがな）' %>
+          <%= f.text_field :title2, class: 'form-control' %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :company, '制作会社' %>
+          <%= f.select :company, 
+          [
+          "WIT STUDIO×CloverWorks",
+          ], { include_blank: '選択してください'},
+          { class: 'form-select' , required: true } %>
+        </div>
+        
+        <div class="row">
+          <div class="col-4 mb-5">
+            <%= f.label :category, 'Category' %>
+            <%= f.select :category, [1, 2, 3], {selected: 1}, class: 'form-select' %>
+            
+          </div>
+          
+          <div class="col-4 mb-5">
+            <%= f.label :season, 'Season' %>
+            <%= f.select :season, [1, 2], {selected: 1}, class: 'form-select' %>
+          </div>
+          
+          <div class="col-4 mb-5">
+            <%= f.label :pickup, 'Pick Up' %>
+            <%= f.select :pickup, [1, 2], {selected: 1}, class: 'form-select' %>
+          </div>
+        </div>
+        <div class="mb-5">
+          <%= f.submit '投稿', class: 'btn btn-primary w-100' %>
+        </div>
+      <% end %>
+      
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="row">
+  
+  <div class="text-center my-4">
+    <h1>作品登録</h1>
+  </div>
+  
+  <div class="col-sm-6 offset-sm-3">
+
+    <%= form_with(model: [ :admin, @anime ]) do |f| %>
+    
+      <div class="mb-3">
+        <%= f.label :img1, 'メイン画像' %>
+        <%= f.text_field :img1, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :img2, 'サブ画像' %>
+        <%= f.text_field :img2, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :title1, 'タイトル' %>
+        <%= f.text_field :title1, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :title2, 'タイトル（読みがな）' %>
+        <%= f.text_field :title2, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :company, '制作会社' %>
+        <%= f.text_field :company, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :category, 'カテゴリー' %>
+        <%= f.text_field :category, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :season, 'This Season' %>
+        <%= f.text_field :season, class: 'form-control' %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :pickup, 'Pick Up' %>
+        <%= f.text_field :pickup, class: 'form-control' %>
+      </div>
+
+      <%= f.submit '投稿', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

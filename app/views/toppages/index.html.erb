@@ -49,17 +49,25 @@
     </div>
     
     <div class="sidebar">
-      <h4 class="sidehead fw-bold">・Search</h4>
+      <h4 class="sidehead1 fw-bold">・Search</h4>
       <div class="sidecontent rounded">
         
-        <div class="sidecontent1">
+        <div class="sidecontent1a">
           <p>検索</p>
         </div>
         
-        <div class="sidecontent2">
+        <div class="sidecontent1b">
           <a>作品一覧</a>
         </div>
         
+      </div>
+      
+      <h4 class="sidehead2 fw-bold">・Admin</h4>
+      <div class="sidecontent2">
+        <ul>
+          <li><%= link_to '新規投稿', "admin/animes/new" %></li>
+          <li><%= link_to '作品一覧', "admin/animes" %></li>
+        </ul>
       </div>
     </div>
     

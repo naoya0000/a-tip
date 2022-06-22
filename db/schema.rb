@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_130047) do
+ActiveRecord::Schema.define(version: 2022_06_21_101817) do
+
+  create_table "animes", charset: "utf8mb4", force: :cascade do |t|
+    t.string "title1"
+    t.string "title2"
+    t.string "img1"
+    t.string "img2"
+    t.string "company"
+    t.integer "category"
+    t.integer "season"
+    t.integer "pickup"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
     t.string "email"
@@ -25,6 +38,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_130047) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false, null: false
   end
 
 end

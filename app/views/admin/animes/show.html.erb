@@ -1,0 +1,44 @@
+<div class="container">
+  <h1><%= @anime.title1 %></h1>
+  
+  <table class="table table-bordered">
+    <tr>
+      <th>画像1</th>
+      <td><%= image_tag(@anime.img1.to_s, size: '128x182') %></td>
+    </tr>
+    <tr>
+      <th>画像2</th>
+      <td><%= image_tag(@anime.img2.to_s, size: '256x144') %></td>
+    </tr>
+    <tr>
+      <th>タイトル</th>
+      <td><%= @anime.title1 %></td>
+    </tr>
+    <tr>
+      <th>タイトル（読み）</th>
+      <td><%= @anime.title2 %></td>
+    </tr>
+    <tr>
+      <th>制作会社</th>
+      <td><%= @anime.company %></td>
+    </tr>
+    <tr>
+      <th>カテゴリー</th>
+      <td><%= @anime.category %></td>
+    </tr>
+    <tr>
+      <th>シーズン</th>
+      <td><%= @anime.season %></td>
+    </tr>
+    <tr>
+      <th>ピックアップ</th>
+      <td><%= @anime.pickup %></td>
+    </tr>
+  </table>
+  
+  <div class="mb-5">
+    <%= link_to '作品一覧に戻る', admin_animes_path, class: 'btn btn-secondary' %>
+    <%= link_to 'この投稿を編集する', edit_admin_anime_path(@anime), class: 'btn btn-primary' %>
+    <%= link_to 'この投稿を削除する', admin_anime_path(:id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
+  </div>
+</div>

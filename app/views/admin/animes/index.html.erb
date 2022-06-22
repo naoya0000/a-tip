@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1>・Animation List</h1>
+  
+    <div class="animelist col">
+      <% @animes.each do |anime| %>
+        <%= link_to image_tag(anime.img1.to_s, size: '192x273'), admin_anime_path(:id) %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
