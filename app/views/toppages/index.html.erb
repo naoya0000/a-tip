@@ -4,10 +4,11 @@
     <h4 class ="tophead mb-3 fw-bold">・Pick Up</h4>
     
     <div class="slider rounded">
-      <a><img src="../../assets/SPY×FAMILY.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/呪術廻戦.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/鬼滅の刃.jpg" alt="画像" height="300px"></a>
-      <a><img src="../../assets/パリピ孔明.jpg" alt="画像" height="300px"></a>
+      <% @animes_pickup2.each do |anime| %>
+        <div class="slider-a d-flex justify-content-center">
+          <%= link_to image_tag(anime.img1.to_s, size: '211x300'), anime_path(anime.id) %>
+        </div>
+      <% end %>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -57,16 +58,16 @@
         </div>
         
         <div class="sidecontent1b">
-          <a>作品一覧</a>
+          <%= link_to '作品一覧', animes_path %>
         </div>
         
       </div>
       
       <h4 class="sidehead2 fw-bold">・Admin</h4>
-      <div class="sidecontent2">
+      <div class="sidecontent2 rounded">
         <ul>
-          <li><%= link_to '新規投稿', "admin/animes/new" %></li>
-          <li><%= link_to '作品一覧', "admin/animes" %></li>
+          <li class="list-unstyled mb-4"><%= link_to '作品一覧', "admin/animes" %></li>
+          <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new" %></li>
         </ul>
       </div>
     </div>

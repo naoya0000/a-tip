@@ -3,7 +3,7 @@ class Admin::AnimesController < ApplicationController
   before_action :set_anime, only: [:show, :edit, :update, :destroy]
   
   def index
-    @pagy, @animes = pagy(Anime.all, items: 30)
+    @pagy, @animes = pagy(Anime.all, items: 10)
   end
 
   def show
@@ -53,7 +53,7 @@ class Admin::AnimesController < ApplicationController
   end
   
   def set_anime
-    @anime = Anime.find_by(params[:id])
+    @anime = Anime.find(params[:id])
   end
   
   def anime_params
