@@ -38,12 +38,11 @@
       <div class="maincontent"> 
       
         <div class="scroll overflow-auto">
-          <div class="scroll-content">
-            <a><img src="../../assets/SPY×FAMILY2.jpg" alt="画像" height="200px"></a>
-            <a><img src="../../assets/クレヨンしんちゃん2.jpg" alt="画像" height="200px"></a>
-            <a><img src="../../assets/進撃の巨人2.jpg" alt="画像" height="200px"></a>
-            <a><img src="../../assets/ドラえもん2.jpg" alt="画像" height="200px"></a>
-          </div>
+          <% @animes_season2.each do |anime| %>
+            <div class="scroll-content">
+              <%= link_to image_tag(anime.img2.to_s, size: '356x200'), anime_path(anime.id) %>
+            </div>
+          <% end %>
         </div>
         
       </div>
@@ -63,13 +62,20 @@
         
       </div>
       
-      <h4 class="sidehead2 fw-bold">・Admin</h4>
-      <div class="sidecontent2 rounded">
-        <ul>
-          <li class="list-unstyled mb-4"><%= link_to '作品一覧', "admin/animes" %></li>
-          <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new" %></li>
-        </ul>
-      </div>
+      <% if logged_in? && current_user.admin? %>
+        <h4 class="sidehead2 fw-bold">・Admin</h4>
+        <div class="sidecontent2 rounded">
+          <ul>
+            <li class="list-unstyled mb-4"><%= link_to '作品一覧', "admin/animes" %></li>
+            <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new" %></li>
+          </ul>
+        </div>
+      <% else %>
+        <div class="sideimg">
+          <img src="../../assets/ジブリ.jpg" alt="画像" height="390px">
+        </div>
+      <% end %>
+      
     </div>
     
   </div>
