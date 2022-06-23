@@ -53,11 +53,27 @@
       <div class="sidecontent rounded">
         
         <div class="sidecontent1a">
-          <p>検索</p>
+          
+          <div class="search-form">
+            <%= form_with url: search_path, method: :get do |f| %>
+            
+              <div class="row">
+                
+                <div class="col-7 px-0">
+                  <%= f.text_field :keyword, value: @keyword, class: "col-6 form-control", placeholder: "作品タイトルを入力" %>
+                </div>  
+                
+                <div class="col-2 px-0">
+                  <%= f.submit '検索', class: 'btn btn-primary' %>
+                </div>
+                
+              </div>
+            <% end %>
+          </div>
         </div>
         
         <div class="sidecontent1b">
-          <%= link_to '作品一覧', animes_path %>
+          <%= link_to '作品一覧', animes_path, class: 'btn btn-outline-secondary' %>
         </div>
         
       </div>
@@ -66,8 +82,8 @@
         <h4 class="sidehead2 fw-bold">・Admin</h4>
         <div class="sidecontent2 rounded">
           <ul>
-            <li class="list-unstyled mb-4"><%= link_to '作品一覧', "admin/animes" %></li>
-            <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new" %></li>
+            <li class="list-unstyled mb-5"><%= link_to '作品一覧', "admin/animes", class: 'btn btn-outline-secondary' %></li>
+            <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new", class: 'btn btn-outline-secondary' %></li>
           </ul>
         </div>
       <% else %>
@@ -83,7 +99,7 @@
 <footer>
   <div id="footer_navi">
     <ul>
-      <li><%= link_to 'お問い合わせ', "contacts/new" %></li>
+      <li><%= link_to 'お問い合わせ', "contacts/new", class: "footlink" %></li>
       <li>退会</li>
     </ul>
   </div>

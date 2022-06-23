@@ -9,4 +9,9 @@ class Anime < ApplicationRecord
   validates :category, presence: true
   validates :season, presence: true
   validates :pickup, presence: true
+  
+  def self.search(keyword)
+    where(["title1 like? OR title2 like?", "%#{keyword}%", "%#{keyword}%"])
+  end
+
 end

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, only: [:create]
   
+  get 'search', to: 'animes#search'
+  get 'animes/thanks', to: 'animes#thanks'
   resources :animes, only: [:index, :show]
   
   namespace :admin do

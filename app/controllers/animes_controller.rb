@@ -8,4 +8,8 @@ class AnimesController < ApplicationController
     @anime = Anime.find(params[:id])
   end
   
+  def search
+    @animes = Anime.search(params[:keyword])
+  end
+  
 end
