@@ -24,6 +24,20 @@
           autoplay: true,
           autoplaySpeed: 1800,
           arrows: false,
+          responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+              slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+              slidesToShow: 1,
+              },
+            },
+          ],
         });
       });
     </script>
@@ -87,9 +101,9 @@
           </ul>
         </div>
       <% else %>
-        <div class="sideimg">
-          <img src="../../assets/ジブリ.jpg" alt="画像" height="390px">
-        </div>
+        
+          <img src="../../assets/ジブリ.jpg" class="d-block mx-auto img-fluid h-50 mt-5" alt="画像">
+        
       <% end %>
       
     </div>
