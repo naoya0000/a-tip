@@ -6,6 +6,7 @@ class AnimesController < ApplicationController
 
   def show
     @anime = Anime.find(params[:id])
+    @tip = Tip.new(title: @anime.title1, company: @anime.company)
   end
   
   def search

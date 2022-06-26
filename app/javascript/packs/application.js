@@ -5,10 +5,13 @@
 
 
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
+// import Turbolinks from "turbolinks"
 import "channels"
 
+require("../card")
 require("jquery")
 
+
 Rails.start()
-Turbolinks.start()
+// Turbolinks.start()
+

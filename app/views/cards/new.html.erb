@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+    <h2 class="text-center my-4">クレジットカード登録</h2>
+    
+    <%= form_with url: cards_path, id: "card_form", local: true do |f| %>
+      <div class="mt-3">
+        <%= f.label :number, "カード番号" %>
+        <%= f.text_field :number, class: "form-control", value: "4242424242424242" %>
+      </div>
+      <div class="mt-3">
+        <%= f.label :name, "カード名義人" %>
+        <%= f.text_field :name, class: "form-control", value: "TARO YAMADA" %>
+      </div>
+      <div class="my-3">
+        <%= f.label :cvc, "セキュリティコード" %>
+        <%= f.text_field :cvc, class: "form-control", value: "123" %>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <%= f.label :exp_month, "有効期限（月）" %>
+          <%= f.text_field :exp_month, class: "form-control", value: "1" %>
+        </div>
+        <div class="col-6">
+          <%= f.label :exp_year, "有効期限（年）" %>
+          <%= f.text_field :exp_year, class: "form-control", value: "25" %>
+        </div>
+      </div>
+      <div>
+        <%= f.submit "送信", class:"btn btn-danger w-100 mt-5" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

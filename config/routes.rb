@@ -22,4 +22,8 @@ Rails.application.routes.draw do
     resources :animes, only: [:index, :new, :create, :show, :update, :edit, :destroy]
   end
   
+  resources :cards, only: [:new, :create]
+  
+  resources :tips, only: [:create]
+  
 end

@@ -1,0 +1,57 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      
+      <div class="text-center my-4">
+        <h2>カード登録</h2>
+      </div>
+      <%= form_with url: cards_path, method: :post, id: "card_form" do |f| %>
+      
+        
+        
+        <div class="mb-4">
+          <%= f.label :number, "カード番号" %><br>
+          <%= f.text_field :number, class: "form-control", id: "number", placeholder:"半角数字のみ", maxlength:"16", value: "4242424242424242" %>
+        </div>
+        
+        <div class="mb-4">
+          <%= f.label :name, "カード名義人" %>
+          <%= f.text_field :name, class: "form-control", id: "name", placeholder:"例）TAROU SUZUKI", value: "TARO YAMADA" %>
+        </div>
+        
+        <div class="mb-4">
+          <%= f.label :cvc, "セキュリティコード" %>
+          <%= f.text_field :cvc, class: "form-control", id: "cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4", value: "123" %>
+        </div>
+        
+        <div class="mb-4">
+          <%= f.label :有効期限 %><br>
+            <div class="row">
+              
+              <div class="col-4">
+                <%= f.select :exp_month, [["01",1.to_s],["02",2.to_s],["03",3.to_s],["04",4.to_s],["05",5.to_s],["06",6.to_s],["07",7.to_s],["08",8.to_s],["09",9.to_s],["10",10.to_s],["11",11.to_s],["12",12.to_s]],{} , class: "form-select", id: "exp_month" %>
+              </div>
+              
+              <div class="col-2">
+                <p class="mt-1">月</p>
+              </div>
+                
+              <div class="col-4">
+                <%= f.select :exp_year, [["22",2022.to_s],["23",2023.to_s],["24",2024.to_s],["25",2025.to_s],["26",2026.to_s],["27",2027.to_s],["28",2028.to_s],["29",2029.to_s],["30",2030.to_s],["31",2031.to_s],["32",2032.to_s]],{} ,class: "form-select", id: "exp_year" %>
+              </div>
+              
+              <div class="col-2">
+                <p class="mt-1">年</p>
+              </div>
+            </div>
+        </div>
+        
+        <%= f.submit "登録する", class:"btn btn-danger w-100 mt-4" %>
+      
+      <% end %>
+    </div>
+  </div>
+</div>
+

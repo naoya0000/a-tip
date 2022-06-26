@@ -47,3 +47,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pagy'
 
 gem 'carrierwave', '~> 2.0'
+
+gem 'payjp'
+
+gem 'dotenv-rails'

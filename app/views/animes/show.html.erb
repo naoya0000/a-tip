@@ -6,15 +6,32 @@
   
       
         
-        <div class="text-center row my-4">
-          <div class="col-5">
+        <div class="text-center my-4">
             <%= image_tag(@anime.img1.to_s, size: '141x200') %>
-          </div>
-          <div class="col-5">
-            <%= @anime.title1 %>
-            <%= @anime.company %>
-          </div>
         </div>
+        
+        <%= form_with(model: @tip) do |f| %>
+  
+          <div class="mb-4">
+            <%= f.label :title, '作品タイトル' %>
+            <%= f.text_field :title, readonly: true, class: 'form-control' %>
+          </div>
+    
+          <div class="mb-4">
+            <%= f.label :company, '制作会社' %>
+            <%= f.text_field :company, readonly: true, class: 'form-control' %>
+          </div>
+    
+          <div class="mb-5">
+            <%= f.label :money, 'チップ額' %>
+            <%= f.number_field :money, class: 'form-control no-spin', placeholder:"半角数字のみ" %>
+          </div>
+    
+          <%= f.submit 'チップを送る', class: 'btn btn-primary w-100' %>
+        <% end %>
+        
+        <%= link_to 'カード', "/cards/new", class: 'btn btn-outline-secondary' %></li>
+       
       
         
       
