@@ -1,7 +1,7 @@
 class AnimesController < ApplicationController
   
   def index
-    @pagy, @animes = pagy(Anime.all, items: 10)
+    @pagy, @animes = pagy(Anime.all, items: 5)
   end
 
   def show

@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
-    <h1 class="my-4">・Animation List</h1>
+    <h1 class="tabletitle text-center my-4">Animation List</h1>
     <% if @animes.any? %>
       <table class="table table-striped">
         <tbody>
-          <% @animes.each do |anime| %>
-            <tr>
-              <td><%= link_to image_tag(anime.img1.to_s, size: '96x136'), anime_path(anime.id) %></td>
-              <td class="titletext lead"><%= anime.title1 %></td>
-            </tr>
-          <% end %>
+            <% @animes.each do |anime| %>
+              <tr>
+                <td class="ml-5"><%= link_to image_tag(anime.img1.to_s, size: '96x136'), anime_path(anime.id) %></td>
+                <td class="titletext text-center lead"><%= anime.title1 %></td>
+              </tr>
+            <% end %>
         </tbody>
       </table>
       <div class="d-flex justify-content-center mb-3">

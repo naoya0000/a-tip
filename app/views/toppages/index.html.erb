@@ -44,77 +44,75 @@
   </div>
   
   <div class="wrapper">
-    
-    <div class="main">
-      
-      <h4 class="mainhead fw-bold">・This Season</h4>
-      
-      <div class="maincontent"> 
-      
-        <div class="scroll overflow-auto">
-          <% @animes_season2.each do |anime| %>
-            <div class="scroll-content">
-              <%= link_to image_tag(anime.img2.to_s, size: '356x200'), anime_path(anime.id) %>
-            </div>
-          <% end %>
-        </div>
+    <div class="row"> 
+      <div class="col-12 col-lg-6">
         
-      </div>
-    </div>
-    
-    <div class="sidebar">
-      <h4 class="sidehead1 fw-bold">・Search</h4>
-      <div class="sidecontent rounded">
+        <h4 class="mainhead  text-center fw-bold">This Season</h4>
         
-        <div class="sidecontent1a">
-          
-          <div class="search-form">
-            <%= form_with url: search_path, method: :get do |f| %>
-            
-              <div class="row">
-                
-                <div class="col-7 px-0">
-                  <%= f.text_field :keyword, value: @keyword, class: "col-6 form-control", placeholder: "作品タイトルを入力" %>
-                </div>  
-                
-                <div class="col-2 px-0">
-                  <%= f.submit '検索', class: 'btn btn-primary' %>
-                </div>
-                
+        <div class="maincontent mb-4"> 
+        
+          <div class="scroll text-center overflow-auto">
+            <% @animes_season2.each do |anime| %>
+              <div class="scroll-content">
+                <%= link_to image_tag(anime.img2.to_s, size: '356x200'), anime_path(anime.id) %>
               </div>
             <% end %>
           </div>
+          
         </div>
-        
-        <div class="sidecontent1b">
-          <%= link_to '作品一覧', animes_path, class: 'btn btn-outline-secondary' %>
-        </div>
-        
       </div>
       
-      <% if logged_in? && current_user.admin? %>
-        <h4 class="sidehead2 fw-bold">・Admin</h4>
-        <div class="sidecontent2 rounded">
-          <ul>
-            <li class="list-unstyled mb-5"><%= link_to '作品一覧', "admin/animes", class: 'btn btn-outline-secondary' %></li>
-            <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new", class: 'btn btn-outline-secondary' %></li>
-          </ul>
+      <div class="col-12 col-lg-6">
+        <div class="sidebar">
+        <h4 class="sidehead1 text-center fw-bold">Search</h4>
+        <div class="sidecontent rounded">
+          
+          <div class="sidecontent1a">
+            
+            <div class="search-form">
+              <%= form_with url: search_path, method: :get do |f| %>
+              
+                <div class="row">
+                  
+                  <div class="col-7 px-0">
+                    <%= f.text_field :keyword, value: @keyword, class: "col-6 form-control", placeholder: "作品タイトルを入力" %>
+                  </div>  
+                  
+                  <div class="col-2 px-0">
+                    <%= f.submit '検索', class: 'btn btn-primary' %>
+                  </div>
+                  
+                </div>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="sidecontent1b text-center">
+            <%= link_to '作品一覧', animes_path, class: 'btn btn-outline-secondary' %>
+          </div>
+          
         </div>
-      <% else %>
         
-          <img src="../../assets/ジブリ.jpg" class="d-block mx-auto img-fluid h-50 mt-5" alt="画像">
-        
-      <% end %>
-      
-    </div>
-    
+        <% if logged_in? && current_user.admin? %>
+          <h4 class="sidehead2 text-center fw-bold">Admin</h4>
+          <div class="sidecontent2 rounded text-center">
+            <li class="list-unstyled text-center mb-5"><%= link_to '作品一覧', "admin/animes", class: 'btn btn-outline-secondary' %></li>
+            <li class="list-unstyled"><%= link_to '新規投稿', "admin/animes/new", class: 'btn btn-outline-secondary' %></li>
+          </div>
+        <% else %>
+          <div class="text-center">
+            <img src="../../assets/ジブリ.jpg" class="mt-5" alt="画像">
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div> 
   </div>
 </div>
 <footer>
   <div id="footer_navi">
     <ul>
       <li><%= link_to 'お問い合わせ', "contacts/new", class: "footlink" %></li>
-      <li><%= link_to 'thanks', "tips/thanks", class: "footlink" %></li>
       <li>退会</li>
     </ul>
   </div>

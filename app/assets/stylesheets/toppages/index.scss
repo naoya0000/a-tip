@@ -22,22 +22,28 @@
 
 .wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 70px 0 50px;
+  margin: 80px 0 40px;
 }
 
-.main {
-  width: 42%;
-}
 
 .mainhead {
   height: 5%;
 }
 
+.mainhead:after {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(190, 190, 20), transparent);
+  background: linear-gradient(to right, rgb(190, 190, 20), transparent);
+}
+
 .maincontent {
   height: 95%;
-  padding: 12px 0 0 12px;
+  padding: 12px 0 0 0;
 }
 
 .scroll {
@@ -49,18 +55,29 @@
   margin-bottom: 10px;
 }
 
-.sidebar {
-  width: 50%;
+.sidebar{
+  margin: 0 30px;
 }
 
 .sidehead1 {
   height: 5%;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
+}
+
+.sidehead1:after {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(50, 90, 120), transparent);
+  background: linear-gradient(to right, rgb(50, 90, 120), transparent);
 }
 
 .sidecontent {
   background-color: #DDDDDD;
-  height: 40%;
+  height: 250px;
   padding-top: 60px;
 }
 
@@ -70,18 +87,29 @@
 
 
 .sidecontent1b {
-  padding: 50px 0 0 70px;
+  padding: 50px 0 0 0;
 }
 
 .sidehead2 {
   height: 5%;
-  margin-top: 18px;
+  margin-top: 25px;
   margin-bottom: 18px;
+}
+
+.sidehead2:after {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
 }
 
 .sidecontent2 {
   background-color: #DDDDDD;
-  height: 42.4%;
-  padding: 80px 120px 0 40px;
+  height: 290px;
+  padding: 80px 0 0 0;
 }
 
