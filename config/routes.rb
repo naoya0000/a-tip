@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
   
   get 'search', to: 'animes#search'
-  get 'animes/thanks', to: 'animes#thanks'
   resources :animes, only: [:index, :show]
   
   namespace :admin do
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
   
   resources :cards, only: [:new, :create]
   
+  get 'tips/thanks', to: 'tips#thanks'
   resources :tips, only: [:create]
   
 end
