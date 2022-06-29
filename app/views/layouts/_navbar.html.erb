@@ -1,5 +1,5 @@
 <header class="mb-4">
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid ps-5 pe-4">
       <a class="navbar-brand fw-bold fst-italic" href="/">Tips For Animator</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -9,11 +9,12 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if logged_in? %>
           <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.name %></button>
+            <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.name %></button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li class="dropdown-divider"></li>
               <li class="dropdown-item"><%= link_to 'カード登録', "/cards/new", class: 'nav-link' %></li>
               <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
+              <li class="dropdown-item"><%= link_to "退会", users_hide_path(current_user), method: :patch, "data-confirm" => "本当に退会しますか？", class: 'nav-link' %></li>
             </ul>
           </div>
         <% else %>

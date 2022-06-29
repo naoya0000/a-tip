@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:create]
+  patch '/users/:id/hide', to: 'users#hide', as: 'users_hide'
   
   get 'search', to: 'animes#search'
   resources :animes, only: [:index, :show]

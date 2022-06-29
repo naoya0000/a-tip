@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_25_183019) do
+ActiveRecord::Schema.define(version: 2022_06_29_084827) do
 
   create_table "animes", charset: "utf8mb4", force: :cascade do |t|
     t.string "title1"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2022_06_25_183019) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false, null: false
+    t.boolean "is_deleted", default: false, null: false
   end
 
   add_foreign_key "cards", "users"

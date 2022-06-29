@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :reject_user, only: [:create]
+  
   def new
   end
 
@@ -31,4 +33,17 @@ class SessionsController < ApplicationController
       return false
     end
   end
+  
+  protected
+
+  def reject_user
+    @user = User.find_by(email: params[:session][:email].downcase)
+    if @user
+      if @user.is_deleted
+        flash[:danger] = "退会済みです。"
+        redirect_to root_url
+      end
+    end
+  end
+  
 end
