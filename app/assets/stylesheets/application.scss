@@ -39,23 +39,27 @@ footer {
 }
 
 footer #footer_navi {
-    background-color: #f0f0f0;
-    padding: 10px 0;
+    background-color: #333;
+    padding: 15px 0;
 }
 
 footer #footer_navi li {
     display: inline;
     border-left: solid 1px #333;
+    border-color: white;
     margin-left: 8px;
     padding-left: 8px;
     font-size: smaller;
+    font-weight: bold;
 }
 
 .footlink {
     text-decoration: none;
+    color: white;
 }
 
 footer #footer_navi li:last-child {
     border-right: solid 1px #333;
+    border-color: white;
     padding: 0 8px;
 }
