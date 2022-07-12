@@ -19,6 +19,7 @@ class CardsController < ApplicationController
     )
 
     if card.save
+      flash[:success] = 'カード登録が完了しました。'
       redirect_to root_path
     else
       flash.now[:danger] = 'カード登録に失敗しました。'

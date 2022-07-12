@@ -8,7 +8,7 @@
           <% @animes.each do |anime| %>
             <tr>
               <td><%= link_to image_tag(anime.img1.to_s, size: '96x136'), anime_path(anime.id) %></td>
-              <td class="titletext lead"><%= anime.title1 %></td>
+              <td class="titletext text-center lead"><%= link_to anime.title1, anime_path(anime.id), class: "titletextlink"%></td>
             </tr>
           <% end %>
         </tbody>

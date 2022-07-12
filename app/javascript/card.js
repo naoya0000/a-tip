@@ -25,7 +25,7 @@ const payjp = () => {
         document.getElementById("exp_year").removeAttribute("name");
         document.getElementById("card_form").submit();
       } else {
-        alert("カード情報が正しくありません")
+        alert("カード情報が正しくありません。再度入力する場合はリロードしてください。")
       } 
     });
   });
