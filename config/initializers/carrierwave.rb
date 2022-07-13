@@ -10,13 +10,12 @@ CarrierWave.configure do |config|
     config.fog_directory  = 'naoya-backet' # バケット名
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: ENV['S3_ACCESS_KEY_ID'], 
-      aws_secret_access_key: ENV['S3_SECRET_ACCESS_KEY'], 
-      region: 'S3_DEFAULT_REGION', 
+      aws_access_key_id: ENV['S3_ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['S3_SECRET_ACCESS_KEY'],
+      region: ENV['S3_DEFAULT_REGION'],
       path_style: true
     }
   else # 本番環境以外の場合はアプリケーション内にアップロード
     config.storage :file
-    config.enable_processing = false if Rails.env.test?
   end
 end
