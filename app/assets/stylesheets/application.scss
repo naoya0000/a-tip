@@ -27,6 +27,10 @@
     font-size: 22px;
 }
 
+.titletextlink:hover {
+    color: gray;
+}
+
 footer #footer_navi ul {
     list-style: none;
     margin: 0;
@@ -42,7 +46,7 @@ footer {
 
 footer #footer_navi {
     background-color: #333;
-    padding: 15px 0;
+    padding: 18px 0 8px 0;
 }
 
 footer #footer_navi li {
@@ -60,8 +64,19 @@ footer #footer_navi li {
     color: white;
 }
 
+.footlink:hover {
+    color: gray;
+}
+
 footer #footer_navi li:last-child {
     border-right: solid 1px #333;
     border-color: white;
     padding: 0 8px;
+}
+
+footer p {
+    font-size: 8px;
+    color: white;
+    text-align: center;
+    padding: 18px 0 0 5px;
 }
