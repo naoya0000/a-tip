@@ -1,19 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-    <h1 class="text-center tabletitle my-4">Search Results</h1>
+    <div class="">
+    <h1 class="tabletitle text-center mt-4 mb-5">Search Results</h1>
     <% if @animes.any? %>
-      <table class="table table-striped">
-        <tbody>
-          <% @animes.each do |anime| %>
-            <tr>
-              <td><%= link_to image_tag(anime.img1.to_s, size: '96x136'), anime_path(anime.id) %></td>
-              <td class="titletext text-center lead"><%= link_to anime.title1, anime_path(anime.id), class: "titletextlink"%></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      
+    <div class="row">
+      <% @animes.each do |anime| %>
+        <div class="col-lg-4 col-md-6  col-12 d-flex justify-content-center">
+        <div class="card my-4" style="width: 230px;">
+          <a href="/animes/<%= anime.id %>" class="text-dark text-decoration-none">
+            <%= image_tag(anime.img1.to_s, size: '230x326')%>
+            <div class="card-body">
+              <h5 class="lead text-center"><%= anime.title1 %>
+            </div>
+          </a>
+        </div>
+        </div>
+      <% end %>
+      </div>
     <% end %>
     </div>
   </div>

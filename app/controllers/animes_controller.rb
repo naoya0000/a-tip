@@ -2,7 +2,7 @@ class AnimesController < ApplicationController
   before_action :require_user_logged_in, only: [:show]
   
   def index
-    @pagy, @animes = pagy(Anime.all, items: 5)
+    @pagy, @animes = pagy(Anime.all, items: 6)
   end
 
   def show
