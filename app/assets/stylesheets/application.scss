@@ -19,6 +19,37 @@
  
  @import "slick-theme";
  @import "slick"; 
+ 
+
+.sform1 {
+    position:absolute;
+    max-width:300px;	
+    margin-bottom:36px;
+    margin-left: 70px;
+}
+.sbox {
+    height:37px;
+    width: 230px;
+    padding:0 40px 0 8px; 
+    position:absolute; 
+    left:30px;
+    top:0; 
+    background:white;	
+}
+
+.sbtn {
+    height:37px;
+    position:absolute; 
+    left:225px;
+    top:0;
+    background:none;
+    color:#666;
+    border:none;
+    font-size:18px;
+}
+.sbtn:hover {
+    color:#7fbfff;
+}
 
 
 .titletextlink {
