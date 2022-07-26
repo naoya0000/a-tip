@@ -5,7 +5,7 @@
       
       <div class="sform1 d-flex">
         <%= form_with url: search_path, method: :get do |f| %>
-          <%= f.text_field :keyword, value: @keyword, class: "sbox form-control", placeholder: " S e a r c h" %>
+          <%= f.text_field :keyword, value: @keyword, class: "sbox form-control", placeholder: " 作 品 名 で 検 索" %>
           <%= button_tag type: "submit", class: 'sbtn' do %>
             <i class="fa-solid fa-magnifying-glass"></i>
           <% end %>

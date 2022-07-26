@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
       flash[:success] = 'お問い合わせを受け付けました。'
       redirect_to root_url
     else
-      flash.now[:danger] = 'お問い合わせの受け付けを完了できませんでした。'
+      flash.now[:danger] = 'お問い合わせの受け付けができませんでした。'
       render :new
     end
   end
