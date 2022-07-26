@@ -1,24 +1,41 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+＜ アプリケーションの名前 ＞<br>
+ T i p s
 
-Things you may want to cover:
 
-* Ruby version
+＜ アプリケーションの概要 ＞<br>
+ユーザーが作品にチップを送ることができるようになります。
 
-* System dependencies
 
-* Configuration
+＜ なぜ作ったのか ＞<br>
+以前、スタジオジブリがどれだけ利益を出しているのかが気になったので、調べてみたことがありました。<br>
+そのときに、興行収入の一般的な制作会社の取り分は約２５％であり、製作費の４倍以上の興行収入でやっと黒字になるということを知りました。<br>
+ジブリのような良質な映画を作り続けている制作会社であっても、純粋な映画興行では多くの作品が赤字であるという事実にショックを受け、もっと現場の人間に金銭的な報酬が渡るような仕組みがあれば良いのではないかと思うようになりました。<br>
+作品の認知度や海外での需要を考えると、視聴者の中にも支援したいと思う人は少なくはないはずですし、僕もその一人です。<br>
+そのため、ユーザーが作品に対して直接的に支援できるチップサービスを作成しようと思いました。
 
-* Database creation
 
-* Database initialization
+＜ 実装した機能 ＞
 
-* How to run the test suite
+・画像投稿機能<br>
+CarrierWaveを用いてAdminユーザーが画像をアップロードできるようにしています。<br>
+画像のアップロード先はAWS S3です。
 
-* Services (job queues, cache servers, search engines, etc.)
+・決済API（チップ機能）<br>
+Pay.jpでクレジットカード決済ができるようにしています。<br>
+Tipテーブルにユーザーがなんの作品にチップを送ったかのログが残るようになっています。
 
-* Deployment instructions
+・ユーザー登録、ログイン機能<br>
+Adminカラムで一般ユーザーとAdminユーザーを分けています。<br>
+Adminユーザーにだけ作品の投稿、編集が行えるようにしています。
 
-* ...
+・退会機能<br>
+退会後もユーザー情報は残しておきたいので、論理削除で実装しました。
+
+・検索機能<br>
+作品名を正式名称とかな読みのどちらでも検索できるようにしています。
+
+・問い合わせ機能<br>
+Contactテーブルに問い合わせを行った人のメールアドレスと問い合わせ内容を保存する機能です。
+
+
