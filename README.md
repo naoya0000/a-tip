@@ -1,24 +1,16 @@
 T i p s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーションの概要　：　ユーザーが作品にチップを送ることができるようになります。
 
-Things you may want to cover:
+＊　なぜ作ったのか　？　
+以前、スタジオジブリがどれだけ利益を出しているのかが気になったので、調べてみたことがありました。
+そのときに、興行収入の一般的な制作会社の取り分は約２５％であり、製作費の４倍以上の興行収入でやっと黒字になるということを知りました。
+ジブリのような良質な映画を作り続けている制作会社であっても、純粋な映画興行では多くの作品が赤字であるという事実にショックを受け、もっと現場の人間に金銭的な報酬が渡るような仕組みがあれば良いのではないかと思うようになりました。
+作品の認知度や海外での需要を考えると、作品の視聴者の中にも支援したいと思う人は多いはずですし、僕もその一人です。
+そのため、ユーザーが作品に対して直接的に支援できるチップサービスを作成しようと思いました。
 
-* Ruby version
+＊　実装した機能
 
-* System dependencies
+・　画像投稿機能
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
