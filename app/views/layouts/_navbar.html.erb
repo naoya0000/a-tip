@@ -1,6 +1,6 @@
-<header class="mb-4">
-  <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
-    <div class="container-fluid ps-5 pe-4">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid ps-5 pe-1">
       <a class="navbar-brand fw-bold fst-italic" href="/">T i p s</a>
       
       <div class="sform1 d-flex">
@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if logged_in? %>
           <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.name %></button>
+            <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.name %></button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li class="dropdown-item"><%= link_to 'カード登録', "/cards/new", class: 'nav-link' %></li>
               <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
