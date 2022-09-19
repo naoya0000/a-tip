@@ -130,15 +130,15 @@
   letter-spacing: -2px;
 }
 
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1100px) {
   #header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 550px;
-    background: -moz-linear-gradient(top right, #FFF, #C0C0C0);
-    background: -o-linear-gradient(top right, #FFF, #C0C0C0);
-    background: linear-gradient(to bottom left, #FFF, #C0C0C0);   
+    background: -moz-linear-gradient(top right, #FFF, #999999);
+    background: -o-linear-gradient(top right, #FFF, #999999);
+    background: linear-gradient(to bottom left, #FFF, #999999);   
     background-size: cover;
   }
   
